@@ -92,4 +92,4 @@ I will explore the relationship between happiness and health between the two sex
 library(ggmosaic)
 HAPPY1 %>% ggplot() + geom_mosaic(aes(x=product(SEX), fill=HAPPY, weight=1)) + facet_grid(~HEALTH)
 ```
-As we can see from the graph, the relationship between happiness and sex is the same between 
+As we can see from the graph, the relationship between happiness and health is the same between the sexes at each health level. However, happiness does appear to depend on health. The graph shows that the healthier a person is, the happier they are. This is shown by the increasing number of "Very happy" responses as health increases, and the decreasing number of "Not so happy" responses as health increases. Approximately the same number of people responded "Pretty happy", regardless of health level.
