@@ -86,3 +86,10 @@ saveRDS(HAPPY1, file='happy1.rds')
 ```
 
 # Part 2: Individual Exploration
+
+I will explore the relationship between happiness and health between the two sexes.
+```{r, warning=FALSE}
+library(ggmosaic)
+HAPPY1 %>% ggplot() + geom_mosaic(aes(x=product(SEX), fill=HAPPY, weight=1)) + facet_grid(~HEALTH)
+```
+As we can see from the graph, the relationship between happiness and sex is the same between 

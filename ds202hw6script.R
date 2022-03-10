@@ -60,3 +60,9 @@ HAPPY1 =
                                                 "EXTREMELY LIBERAL")))
 
 str(HAPPY1)
+saveRDS(HAPPY1, file="happy1.rds")
+
+#explore relationship between happiness and two other variables
+#happy, health, and sex
+library(ggmosaic)
+HAPPY1 %>% ggplot() + geom_mosaic(aes(x=product(SEX), fill=HAPPY, weight=1)) + facet_grid(~HEALTH)
